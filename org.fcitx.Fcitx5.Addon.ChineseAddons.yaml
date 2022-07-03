@@ -1,4 +1,5 @@
 app-id: org.fcitx.Fcitx5.Addon.ChineseAddons
+branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
 sdk: org.kde.Sdk//5.15-21.08
@@ -30,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.0.13
+        tag: 5.0.14
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
@@ -42,4 +43,3 @@ modules:
     post-install:
       - appstream-compose --basename=org.fcitx.Fcitx5.Addon.ChineseAddons --prefix=${FLATPAK_DEST}
         --origin=flatpak org.fcitx.Fcitx5.Addon.ChineseAddons
-branch: stable
