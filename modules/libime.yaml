@@ -3,14 +3,14 @@ buildsystem: cmake-ninja
 sources:
   - type: git
     url: https://github.com/fcitx/libime
-    tag: 1.0.13
+    tag: 1.1.2
   - type: file
-    url: https://download.fcitx-im.org/data/lm_sc.arpa-20220630.tar.xz
-    sha256: 8d3b0fa8fa16b93d0d4590f02da04029c271364b5925c1c902845c374a2a00bf
+    url: https://download.fcitx-im.org/data/lm_sc.arpa-20230712.tar.xz
+    sha256: badd62c16c6373787a0fda8f09cd452d12f60d5868856f651ceecf1a07baba32
     dest: data
   - type: file
-    url: https://download.fcitx-im.org/data/dict_sc.txt-20220628.tar.xz
-    sha256: d0fc77543cc763cacb986d6e650827bd6050579584273f6216ab58672480f17c
+    url: https://download.fcitx-im.org/data/dict-20230412.tar.xz
+    sha256: f05fccaff9687900aac3d9ad5a81b20888b573201403fbcd9bbc7907d9e97507
     dest: data
   - type: file
     url: https://download.fcitx-im.org/data/table.tar.gz
