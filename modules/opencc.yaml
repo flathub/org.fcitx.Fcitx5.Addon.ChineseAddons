@@ -4,4 +4,4 @@ no-parallel-make: true
 sources:
   - type: git
     url: https://github.com/BYVoid/OpenCC/
-    branch: ver.1.1.3
+    tag: ver.1.1.6
