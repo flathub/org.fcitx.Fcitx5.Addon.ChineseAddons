@@ -6,5 +6,7 @@ sources:
     tag: 5.0.11
 modules:
   - ../shared-modules/lua5.3/lua-5.3.5.json
+config-opts:
+  - -DCMAKE_BUILD_TYPE=Release
 cleanup:
   - '*'
