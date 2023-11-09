@@ -26,13 +26,14 @@ modules:
   - name: fcitx5-chinese-addons
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_TESTING=Off
       - -DENABLE_OPENCC=On
       - -DENABLE_GUI=On
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.1
+        tag: 5.1.2
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
