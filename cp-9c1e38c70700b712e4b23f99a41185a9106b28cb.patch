@@ -1,0 +1,26 @@
+From 9c1e38c70700b712e4b23f99a41185a9106b28cb Mon Sep 17 00:00:00 2001
+From: Weng Xuetian <wengxt@gmail.com>
+Date: Wed, 6 Mar 2024 23:31:08 -0800
+Subject: [PATCH] Add developer tag
+
+---
+ org.fcitx.Fcitx5.Addon.ChineseAddons.metainfo.xml.in | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/org.fcitx.Fcitx5.Addon.ChineseAddons.metainfo.xml.in b/org.fcitx.Fcitx5.Addon.ChineseAddons.metainfo.xml.in
+index b54554f..1293640 100644
+--- a/org.fcitx.Fcitx5.Addon.ChineseAddons.metainfo.xml.in
++++ b/org.fcitx.Fcitx5.Addon.ChineseAddons.metainfo.xml.in
+@@ -6,8 +6,12 @@
+   <project_license>GPL-2.0+ and LGPL-2.1+</project_license>
+   <name>Chinese Addons</name>
+   <summary>Add support for Pinyin, Table and many other Chinese related functionality to Fcitx</summary>
++  <developer id="org.fcitx-im">
++      <name>The Fcitx Team</name>
++  </developer>
+   <url type="homepage">https://fcitx-im.org</url>
+   <url type="bugtracker">https://github.com/fcitx/fcitx5-chinese-addons/issues</url>
++  <url type="vcs-browser">https://github.com/fcitx/fcitx5-chinese-addons</url>
+   <project_group>Fcitx</project_group>
+   <releases>
+     <release version="5.1.4" date="2024-02-28"/>
