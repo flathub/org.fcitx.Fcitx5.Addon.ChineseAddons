@@ -34,7 +34,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.4
+        tag: 5.1.5
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
