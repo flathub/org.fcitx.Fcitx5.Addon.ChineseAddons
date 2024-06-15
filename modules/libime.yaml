@@ -3,7 +3,7 @@ buildsystem: cmake-ninja
 sources:
   - type: git
     url: https://github.com/fcitx/libime
-    tag: 1.1.7
+    tag: 1.1.8
   - type: file
     url: https://download.fcitx-im.org/data/lm_sc.arpa-20230712.tar.xz
     sha256: badd62c16c6373787a0fda8f09cd452d12f60d5868856f651ceecf1a07baba32
