@@ -2,7 +2,7 @@ app-id: org.fcitx.Fcitx5.Addon.ChineseAddons
 branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.8
+sdk: org.kde.Sdk//6.9
 build-extension: true
 separate-locales: false
 build-options:
@@ -21,7 +21,6 @@ modules:
   - modules/libime.yaml
   - modules/fcitx5-lua.yaml
   - modules/opencc.yaml
-  - modules/fmt.yaml
   - name: fcitx5-chinese-addons
     buildsystem: cmake-ninja
     config-opts:
@@ -33,12 +32,12 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.8
+        tag: 5.1.9
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
         dest: modules/pinyinhelper
       - type: file
-        url: https://download.fcitx-im.org/data/py_stroke-20121124.tar.gz
-        sha256: 8eb128a9bfa43952e67cf2fcee1fd134c6f4cfd317bc2f6c38a615f5eb64e248
+        url: https://download.fcitx-im.org/data/py_stroke-20250329.tar.gz
+        sha256: c1a7ca7225d3614ab83353fc827503006a980447762018f53760425d7b5303a6
         dest: modules/pinyinhelper
