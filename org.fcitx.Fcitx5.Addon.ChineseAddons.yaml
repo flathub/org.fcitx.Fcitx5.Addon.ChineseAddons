@@ -1,13 +1,14 @@
 app-id: org.fcitx.Fcitx5.Addon.ChineseAddons
-branch: stable
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.9
+sdk: org.kde.Sdk//6.10
 build-extension: true
 separate-locales: false
 build-options:
   prefix: /app/addons/ChineseAddons
   prepend-pkg-config-path: /app/addons/ChineseAddons/lib/pkgconfig
+  no-debuginfo: true
+  strip: true
 cleanup:
   - /include
   - '*.la'
@@ -17,7 +18,6 @@ cleanup:
   - /man
 modules:
   - modules/boost.yaml
-  - modules/zstd.yaml
   - modules/libime.yaml
   - modules/fcitx5-lua.yaml
   - modules/opencc.yaml
@@ -32,7 +32,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.9
+        tag: 5.1.11
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
