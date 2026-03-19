@@ -3,7 +3,8 @@ buildsystem: cmake-ninja
 sources:
   - type: git
     url: https://github.com/fcitx/fcitx5-lua
-    tag: 5.0.15
+    tag: 5.0.16
+    commit: 6d32ce6d53697fa4cde65cef236321700e9cc976
 modules:
   - ../shared-modules/lua5.3/lua-5.3.5.json
 config-opts:
