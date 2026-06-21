@@ -3,15 +3,15 @@ buildsystem: cmake-ninja
 sources:
   - type: git
     url: https://github.com/fcitx/libime
-    tag: 1.1.14
-    commit: c5bce5bb5bf5436f99bf7c9bc1ac160782d36039
+    tag: 1.1.15
+    commit: 1421c8cfc33fa383393b8afa36dec352dc55a2f2
   - type: file
-    url: https://download.fcitx-im.org/data/lm_sc.arpa-20250113.tar.zst
-    sha256: ee83ecf20d52e8bccdba4cf6cd57183d53c257713a5eb77ee3a63d50fc3796dd
+    url: https://download.fcitx-im.org/data/lm_sc.arpa-20260606.tar.zst
+    sha256: 8c7da1b03770060269b92c0e6172552a2a9041cb74ef0be0b2659e10f0a703f1
     dest: data
   - type: file
-    url: https://download.fcitx-im.org/data/dict-20250327.tar.zst
-    sha256: 7ca6be4754c0d4c27ba7702c0dce651659bd2ca1faa5cbf2848d81a0053c8c13
+    url: https://download.fcitx-im.org/data/dict-20260430.tar.zst
+    sha256: 3edc008d90fcd61b9967b9e590f396189d7a00fa74c45ecde0d9850a0fdd6241
     dest: data
   - type: file
     url: https://download.fcitx-im.org/data/table-20240108.tar.zst
