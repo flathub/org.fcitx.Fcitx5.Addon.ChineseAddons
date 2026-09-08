@@ -1,7 +1,7 @@
 app-id: org.fcitx.Fcitx5.Addon.ChineseAddons
 runtime: org.fcitx.Fcitx5
 runtime-version: stable
-sdk: org.kde.Sdk//6.10
+sdk: org.kde.Sdk//6.11
 build-extension: true
 separate-locales: false
 build-options:
@@ -17,10 +17,77 @@ cleanup:
   - /lib/pkgconfig
   - /man
 modules:
-  - modules/boost.yaml
-  - modules/libime.yaml
-  - modules/fcitx5-lua.yaml
-  - modules/opencc.yaml
+  - name: boost
+    buildsystem: simple
+    sources:
+      - type: archive
+        url: https://archives.boost.io/release/1.92.0/source/boost_1_92_0.tar.bz2
+        sha256: 5c1d40cb8e19adbf740a4ec2da35b3e58f3f5804b1dce44deb53df72193cbc6c
+        x-checker-data:
+          type: anitya
+          project-id: 6845
+          stable-only: true
+          url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_${patch}.tar.bz2
+          versions:
+            '!=': 1.91.0-1
+    build-commands:
+      - ./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=iostreams,regex,filesystem,locale
+      - ./b2 headers
+      - ./b2 -j$FLATPAK_BUILDER_N_JOBS install variant=release cxxstd=17 --layout=system
+  - name: libime
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/fcitx/libime
+        tag: 1.1.16
+        commit: 5d64bcfef74eb110057e07e0b09eef34b555e4ab
+      - type: file
+        url: https://download.fcitx-im.org/data/lm_sc.arpa-20260629.tar.zst
+        sha256: 06808333b9173e5374cf2cb5afc12d08f5625bf9abb536489cac376fc05f2e7f
+        dest: data
+      - type: file
+        url: https://download.fcitx-im.org/data/dict-20260703.tar.zst
+        sha256: c686cab6df8964c48d596f57d205bac31fc72870b06a83017e44503df8c09697
+        dest: data
+      - type: file
+        url: https://download.fcitx-im.org/data/table-20240108.tar.zst
+        sha256: 3e9d87b04a393f131723472c8eaa860dd23c378a3d4f6a9005513b2a95b3614b
+        dest: data
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+  - name: fcitx5-lua
+    buildsystem: cmake-ninja
+    sources:
+      - type: git
+        url: https://github.com/fcitx/fcitx5-lua
+        tag: 5.0.18
+        commit: 39763bd1745e7ee0aa958a1fcb21b9199de0995f
+    modules:
+      - shared-modules/lua5.3/lua-5.3.5.json
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+    cleanup:
+      - '*'
+  - name: opencc
+    buildsystem: cmake-ninja
+    no-parallel-make: true
+    sources:
+      - type: git
+        url: https://github.com/BYVoid/OpenCC/
+        tag: ver.1.4.2
+        x-checker-data:
+          type: anitya
+          project-id: 2542
+          stable-only: true
+          tag-template: ver.${version}
+        commit: 025f371dc76b598d77384fbdab90c937471844d8
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+    cleanup:
+      - /bin
+      - /include
+      - /lib/cmake
+      - /lib/pkgconfig
   - name: fcitx5-chinese-addons
     buildsystem: cmake-ninja
     config-opts:
@@ -31,8 +98,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.13
-        commit: 334f30f9f4738c69f4a0eccbbdb7362a7d7497ba
+        tag: 5.1.14
+        commit: 93b81c1b88973ffa0d8f9419861245643bbe8cad
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
