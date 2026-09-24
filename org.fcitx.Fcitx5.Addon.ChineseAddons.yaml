@@ -39,15 +39,15 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/libime
-        tag: 1.1.16
-        commit: 5d64bcfef74eb110057e07e0b09eef34b555e4ab
+        tag: 1.1.17
+        commit: 50de277992132ff59a6da64c88318f2a51a08f3d
       - type: file
         url: https://download.fcitx-im.org/data/lm_sc.arpa-20260629.tar.zst
         sha256: 06808333b9173e5374cf2cb5afc12d08f5625bf9abb536489cac376fc05f2e7f
         dest: data
       - type: file
-        url: https://download.fcitx-im.org/data/dict-20260703.tar.zst
-        sha256: c686cab6df8964c48d596f57d205bac31fc72870b06a83017e44503df8c09697
+        url: https://download.fcitx-im.org/data/dict-20260907.tar.zst
+        sha256: fb75a179065e690dfc4559ce1807cbaf4fbe4f0111a5005615be9f435e6b9d76
         dest: data
       - type: file
         url: https://download.fcitx-im.org/data/table-20240108.tar.zst
@@ -98,8 +98,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.14
-        commit: 93b81c1b88973ffa0d8f9419861245643bbe8cad
+        tag: 5.1.15
+        commit: 0a1fdef334f969dc089c6deac7b290777db9bca5
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
