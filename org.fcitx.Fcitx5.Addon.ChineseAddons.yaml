@@ -39,8 +39,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/libime
-        tag: 1.1.17
-        commit: 50de277992132ff59a6da64c88318f2a51a08f3d
+        tag: 1.1.18
+        commit: ad82ce89f9324ef7ba2617681d4f22ec9a320222
       - type: file
         url: https://download.fcitx-im.org/data/lm_sc.arpa-20260629.tar.zst
         sha256: 06808333b9173e5374cf2cb5afc12d08f5625bf9abb536489cac376fc05f2e7f
@@ -98,8 +98,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fcitx/fcitx5-chinese-addons
-        tag: 5.1.15
-        commit: 0a1fdef334f969dc089c6deac7b290777db9bca5
+        tag: 5.1.16
+        commit: 008e2e23bdb953f12193f7109f00bfe52ea6796e
       - type: file
         url: https://download.fcitx-im.org/data/py_table-20121124.tar.gz
         sha256: 42146ac97de6c13d55f9e99ed873915f4c66739e9c11532a34556badf9792c04
